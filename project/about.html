@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Place Your Order | Sweet Crumbs Bakery</title>
+  <link rel="stylesheet" href="project.css" />
+</head>
+
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <h1>CrèmeCraft</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="order.html">Place Order</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ORDER SECTION -->
+  <section class="order-dark">
+    <div class="order-container">
+      <h2>PLACE YOUR ORDER</h2>
+      <p class="order-intro">
+        Treat yourself to freshly baked goodness — fill in your details and we’ll prepare your favorites with love. 🍩
+      </p>
+
+      <form id="orderForm" class="order-form">
+        <div class="form-row">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" placeholder="Enter your name" required>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email:</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-row">
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" placeholder="Enter your phone number" required>
+        </div>
+
+        <div class="form-row">
+          <label for="item">Select Item:</label>
+          <select id="item" required>
+            <option value="">-- Choose an Item --</option>
+            <option>Chocolate Cake</option>
+            <option>Vanilla Cupcakes (6 pcs)</option>
+            <option>Butter Croissants</option>
+            <option>Fresh Bread</option>
+            <option>Cookies (Pack of 10)</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" min="1" max="20" value="1" required>
+        </div>
+
+        <div class="form-row">
+          <label>Order Type:</label>
+          <div class="radio-group-inline">
+            <label><input type="radio" name="orderType" value="pickup" required> Pickup</label>
+            <label><input type="radio" name="orderType" value="delivery"> Delivery</label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="message">Message:</label>
+          <textarea id="message" rows="3" placeholder="Any special instructions?"></textarea>
+        </div>
+
+        <button type="submit" class="btn-dark">Submit Order</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>© CrèmeCraft | Baked with Love 🤎</footer>
+
+  <script>
+    document.getElementById('orderForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      alert("Thank you for your order! 🎉\nOur team will contact you soon for confirmation.");
+      this.reset();
+    });
+  </script>
+</body>
+
+</html>

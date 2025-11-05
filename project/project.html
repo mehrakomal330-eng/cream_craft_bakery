@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sweet Crumbs Bakery</title>
+    <style>
+        /* ---------- GENERAL STYLES ---------- */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff8f3;
+            color: #3e2c20;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: linear-gradient(to right, #3e2c20, #5a4633);
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            margin: auto;
+        }
+
+        nav h1 {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 2em;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #f5c16c;
+        }
+
+        /* ---------- HERO SECTION ---------- */
+        .hero {
+            height: 90vh;
+            background: url('https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=1400&q=60') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            flex-direction: column;
+            background-attachment: fixed;
+        }
+
+        .hero h2 {
+            font-size: 3em;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+
+        .hero button {
+            margin-top: 20px;
+            background-color: #f5c16c;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1em;
+            font-weight: bold;
+            border-radius: 25px;
+            color: #3e2c20;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .hero button:hover {
+            background-color: #3e2c20;
+            color: white;
+        }
+
+        /* ---------- MENU SECTION ---------- */
+        .menu {
+            padding: 60px 10%;
+            text-align: center;
+        }
+
+        .menu h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #3e2c20;
+        }
+
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .item {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .item:hover {
+            transform: scale(1.05);
+        }
+
+        .item img {
+            width: 100%;
+            border-radius: 15px 15px 0 0;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .item h3 {
+            color: #3e2c20;
+        }
+
+        .item p {
+            color: #5a4633;
+            padding: 0 15px 20px;
+        }
+
+        /* ---------- CONTACT SECTION ---------- */
+        .contact {
+            background-color: #3e2c20;
+            color: white;
+            padding: 50px 10%;
+            text-align: center;
+        }
+
+        .contact h2 {
+            color: #f5c16c;
+            font-size: 2em;
+        }
+
+        .contact form {
+            margin-top: 25px;
+        }
+
+        .contact input,
+        .contact textarea {
+            width: 80%;
+            max-width: 500px;
+            padding: 12px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+        }
+
+        .contact button {
+            background-color: #f5c16c;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            color: #3e2c20;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .contact button:hover {
+            background-color: #f0b95c;
+        }
+
+        footer {
+            background-color: #1e140b;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ---------- HEADER ---------- -->
+    <header>
+        <nav>
+            <h1>Sweet Crumbs Bakery</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ---------- HERO ---------- -->
+    <section class="hero" id="home">
+        <h2>Freshly Baked Happiness</h2>
+        <button onclick="scrollToMenu()">Explore Menu</button>
+    </section>
+
+    <!-- ---------- MENU ---------- -->
+    <section class="menu" id="menu">
+        <h2>Our Specials</h2>
+        <div class="menu-items">
+            <div class="item">
+                <img src="https://images.unsplash.com/photo-1605478571957-7bb7c6b88a1d?auto=format&fit=crop&w=800&q=60"
+                    alt="Cupcake">
+                <h3>Chocolate Cupcake</h3>
+                <p>Rich cocoa flavor topped with creamy frosting.</p>
+            </div>
+
+            <div class="item">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=60"
+                    alt="Croissant">
+                <h3>Buttery Croissant</h3>
+                <p>Flaky, golden layers made with real butter.</p>
+            </div>
+
+            <div class="item">
+                <img src="https://images.unsplash.com/photo-1598373182133-5f2f09a7bdb8?auto=format&fit=crop&w=800&q=60"
+                    alt="Cake">
+                <h3>Classic Cheesecake</h3>
+                <p>Velvety smooth with a graham cracker crust.</p>
+            </div>
+
+            <div class="item">
+                <img src="https://images.unsplash.com/photo-1590080875833-46cfa33c16d1?auto=format&fit=crop&w=800&q=60"
+                    alt="Bread">
+                <h3>Fresh Breads</h3>
+                <p>Perfectly baked loaves with a crisp crust.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ---------- CONTACT ---------- -->
+    <section class="contact" id="contact">
+        <h2>Get in Touch</h2>
+        <form onsubmit="return submitForm()">
+            <input type="text" id="name" placeholder="Your Name" required /><br />
+            <input type="email" id="email" placeholder="Your Email" required /><br />
+            <textarea id="message" rows="4" placeholder="Your Message" required></textarea><br />
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- ---------- FOOTER ---------- -->
+    <footer>
+        © 2025 Sweet Crumbs Bakery | Designed with ♥ in Brown, White & Black
+    </footer>
+
+    <script>
+        // Scroll to menu function
+        function scrollToMenu() {
+            document.getElementById("menu").scrollIntoView({ behavior: "smooth" });
+        }
+
+        // Contact form function
+        function submitForm() {
+            let name = document.getElementById("name").value;
+            alert("Thank you, " + name + "! Your message has been sent successfully!");
+            return false; // Prevent real form submission for demo
+        }
+    </script>
+</body>
+
+</html>

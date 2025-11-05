@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sweet Crumbs Bakery</title>
+  <link rel="stylesheet" href="project.css" />
+</head>
+
+<body>
+  <!-- Header & Navigation -->
+  <header>
+    <nav>
+      <h1>CrèmeCraft</h1>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">Place Order</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HOME SECTION -->
+  <section class="home" id="home">
+    <div class="home-content">
+      <h2>Welcome to CrèmeCraft</h2>
+      <p>
+        Freshly baked with love — taste the sweetness in every crumb.
+        From soft croissants to rich chocolate cakes, our creations bring joy to every bite!
+      </p>
+      <a href="#about" class="btn">Discover Our Story</a>
+    </div>
+  </section>
+
+  <!-- ABOUT US SECTION -->
+  <section class="about-section" id="about">
+    <div class="overlay">
+      <h2>About CrèmeCraft</h2>
+      <p class="intro">
+        At <strong>Sweet CrèmeCraft</strong>, baking is more than a craft — it’s our way of sharing happiness.
+        Founded in 2015, we’ve been delighting our community with irresistible treats made from the finest ingredients.
+      </p>
+    </div>
+  </section>
+
+  <section class="about-content">
+    <div class="about-text">
+      <h3>Our Story</h3>
+      <p>
+        What started as a small home bakery has blossomed into a neighborhood favorite.
+        Inspired by timeless recipes and guided by passion, we craft bread, pastries, and desserts
+        that not only taste amazing but warm the soul.
+      </p>
+
+      <h3>Our Mission</h3>
+      <p>
+        To bring people together through the joy of baking.
+        Every loaf, tart, and cupcake we make is prepared with care,
+        ensuring a delightful experience for every customer.
+      </p>
+
+      <h3>Meet Our Team</h3>
+      <p>
+        Our team of bakers, pastry chefs, and baristas share one dream — to make every day a little sweeter.
+        Led by our founder <strong>Chef Neha</strong>, each creation is a masterpiece of flavor and design.
+      </p>
+    </div>
+
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=60"
+        alt="Bakery Interior">
+      <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=600&q=60"
+        alt="Baking Process">
+      <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=600&q=60"
+        alt="Cupcakes Display">
+      <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=600&q=60"
+        alt="Cupcakes Display">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>© CrèmeCraft | Baked with Love 🤎</footer>
+
+  <!-- Smooth Scroll Script -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sweet Crumbs Bakery | Contact</title>
+    <link rel="stylesheet" href="project.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>CrèmeCraft</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">Place Order</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <center>
+            <h1><b>CONTACT US</b></h1>
+        </center>
+        <form onsubmit="return submitForm()">
+            <input type="text" id="name" placeholder="Your Name" required><br>
+            <input type="email" id="email" placeholder="Your Email" required><br>
+            <textarea id="message" rows="4" placeholder="Your Message" required></textarea><br>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>© CrèmeCraft | All Rights Reserved</footer>
+
+    <script>
+        function submitForm() {
+            const name = document.getElementById("name").value;
+            alert("Thank you, " + name + "! Your message has been sent successfully!");
+            return false;
+        }
+    </script>
+</body>
+
+</html>
